@@ -1,0 +1,66 @@
+<div class="cartlist-container" *ngIf="chekoutItemArr && chekoutItemArr.length">
+    <div class="row">
+        <div class="product-list-container col-xs-12 col-md-8">
+          <div class="list-container">
+            <div class="card w-75">
+              <div class="card-body clearfix" *ngFor="let cartItem of chekoutItemArr;let i=index">
+                <h5 class="card-title float-left">{{cartItem.itemObj.itemName}}</h5>
+                <div class="button-container float-right">
+                  <button type="button" class="btn btn-info" (click)=increment(i)>+</button>
+                  <span>{{cartItem.quantity}}</span>
+                  <button type="button" class="btn btn-info" (click)=decrement(i)>-</button>
+                </div>
+      
+      
+              </div>
+            </div>
+      
+          </div>
+        </div>
+        <div class="calculator-container col-xs-12 col-md-4">
+          <div class="card w-75">
+            <div class="card-body">
+              <div class="cart-list-item-container">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr *ngFor="let cartItem of chekoutItemArr;">
+                      <td><span class="itemName">{{cartItem.itemObj.itemName}}</span></td>
+                      <td><span class="multiplysign"> X</span></td>
+                      <td><span class="quantity">{{cartItem.quantity}}</span></td>
+                      <td> <span class="price">{{cartItem.quantity * cartItem.itemObj.price}}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="total-container">
+                <table class="table table-dark">
+                  <tbody>
+                    <tr>
+                      <td><span class="total">Total:</span></td>
+                      <td class="total-amount"><span>{{getTotal()}}</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="total">Discount:</span></td>
+                      <td class="total-amount"><span>10%</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="total">SubTotal:</span></td>
+                      <td class="total-amount"><span>{{getSubtotal()}}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      
+      </div>
+</div>
+
+<div class="no-cartlistcontatiner" *ngIf="!chekoutItemArr.length">
+  <div class="row">
+    <p>Your Cart is Empty</p>
+  </div>
+    
+</div>

@@ -1,0 +1,104 @@
+.container-loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    color: #ba9765;
+  }
+  
+  .loader {
+    height: 20px;
+    width: 315px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .loader--dot {
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+  }
+  .loader--dot:first-child {
+    background-color: #0277c0;
+    animation-delay: 0.5s;
+  }
+  .loader--dot:nth-child(2) {
+    background-color: #138896;
+    animation-delay: 0.4s;
+  }
+  .loader--dot:nth-child(3) {
+    background-color: #46b7e1;
+    animation-delay: 0.3s;
+  }
+  .loader--dot:nth-child(4) {
+    background-color: #0f82ad;
+    animation-delay: 0.2s;
+  }
+  .loader--dot:nth-child(5) {
+    background-color: #a679d1;
+    animation-delay: 0.1s;
+  }
+  .loader--dot:nth-child(6) {
+    background-color: #c86dd7;
+    animation-delay: 0s;
+  }
+  .loader-text {
+    position: absolute;
+    top: 70px;
+    left: 8px;
+    right: 0;
+    width: 7rem;
+    margin: auto;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Roboto Light";
+  }
+  
+  .loader-text:after {
+    content: " .";
+    display:inline;
+    animation: dots 1s steps(5, end) infinite;
+  }
+  
+  @keyframes dots {
+    0%,
+    20% {
+      color: rgba(0, 0, 0, 0);
+      text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    40% {
+      color: white;
+      text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    60% {
+      text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(0, 0, 0, 0);
+    }
+    80%,
+    100% {
+      text-shadow: 0.25em 0 0 white, 0.5em 0 0 white;
+    }
+  }
+  
+  
+  @keyframes loader {
+    10% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX(300px);
+    }
+    65% {
+      transform: translateX(300px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

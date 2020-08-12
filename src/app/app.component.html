@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container-fluid">
+      <header>
+        <app-header-features-description [pageTitle]="pageTitle" *ngIf="pageTitle && pageTitle.length"> </app-header-features-description>
+        <app-header-widget [cartComponentVisibility]="cartComponentVisibility" [searchComponentVisibility]="searchComponentVisibility"></app-header-widget>
+      </header>
+<div class="router-outlet-container">
+    <router-outlet></router-outlet>
+
+</div>
+      
+
+</div>

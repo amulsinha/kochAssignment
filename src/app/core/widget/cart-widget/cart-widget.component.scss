@@ -1,0 +1,21 @@
+.cart-container {
+  position: relative;
+  padding: 0 12px;
+  i {
+    font-size: 55px;
+    cursor: pointer;
+  }
+  .item-count-container {
+    position: absolute;
+    background-color: #fff;
+    right: 0px;
+    top: -23px;
+    border-radius: 30px;
+    padding: 4px;
+    width: 35px;
+    text-align: center;
+    span {
+      color: #000;
+    }
+  }
+}

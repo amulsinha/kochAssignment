@@ -1,0 +1,40 @@
+<div class="row">
+      <div class="col-md-2 col-xs-12 price-range-filter-container">
+          <div class="slidecontainer">
+            <app-price-range-slider></app-price-range-slider>
+            </div>
+      </div>
+      <div class="col-md-10 col-xs-12 item-display-container clearfix">
+       <div class="sorting-container clearfix">
+            <div class="sortingcontainer-wrapper float-right">
+               <app-sorting></app-sorting>
+            </div>
+       </div>
+       <div class="item-container" *ngIf="visibleitemList && visibleitemList.length">
+              <div class="row">
+                        <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of visibleitemList">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" [src]="item.itemUrl" alt="Card image cap">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{item.itemName}}</h5>
+                                  <p class="card-text">{{item.price}}</p>
+                                  <span class="btn btn-primary" (click)=addTocart(item)>Add To cart</span>
+                                </div>
+                              </div>
+                        </div>
+
+                       
+                        
+              </div>
+       </div>
+       <div class="no-item-container" *ngIf="!visibleitemList.length">
+         <div class="row">
+            <div class="col-md-4 col-xs-12 no-item-wrapper">
+                <p>No Product Found</p>
+            </div>
+         </div>
+          
+      </div>
+
+      </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="widget-container clearfix">
+    <div class="float-right">
+        <div class="search-btn float-left" *ngIf="searchComponentVisibility">
+                <app-search-widget></app-search-widget>
+        </div>
+        <div class="cart-btn float-right" *ngIf="cartComponentVisibility">
+              <app-cart-widget [cartItemLength]="cartitem"></app-cart-widget>
+        </div>
+    </div>
+</div>
