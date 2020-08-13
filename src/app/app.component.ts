@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   public pageTitle:string;
   public cartComponentVisibility:boolean;
   public searchComponentVisibility:boolean =true;
+  public headerVisibility:boolean;
   constructor(
     private router: Router,
     private route: ActivatedRoute
@@ -24,11 +25,16 @@ export class AppComponent implements OnInit{
         if(this.currentPage == 'product-catalog'){
           this.pageTitle = Constants.pageDescription.productcatlog;
           this.cartComponentVisibility = true;
+          this.headerVisibility=true;
         }
-        else{
+        else if(this.currentPage == 'product-checkout'){
+          this.headerVisibility=true;
           this.pageTitle = Constants.pageDescription.checkout;
           this.cartComponentVisibility = false;
-
+          this.headerVisibility=true;
+        }
+        else{
+          this.headerVisibility =false;
         }
       }
       

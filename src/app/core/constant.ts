@@ -4,8 +4,8 @@ export class Constants {
         checkout:"Checkout"
     };
     public static pageUrl = {
-        productcatlog:"/product-catalog",
-        checkout:"/product-checkout"
+        productcatlog:"product-catalog",
+        checkout:"product-checkout"
     }
 
 }
