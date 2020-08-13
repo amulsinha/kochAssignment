@@ -12,8 +12,9 @@ export class AppComponent implements OnInit{
   private currentPage;
   public pageTitle:string;
   public cartComponentVisibility:boolean;
-  public searchComponentVisibility:boolean =true;
+  public searchComponentVisibility:boolean;
   public headerVisibility:boolean;
+  public backButtonLinkVisibilty:boolean;
   constructor(
     private router: Router,
     private route: ActivatedRoute
@@ -25,13 +26,17 @@ export class AppComponent implements OnInit{
         if(this.currentPage == 'product-catalog'){
           this.pageTitle = Constants.pageDescription.productcatlog;
           this.cartComponentVisibility = true;
+          this.searchComponentVisibility =true;
           this.headerVisibility=true;
+          this.backButtonLinkVisibilty=false;
         }
         else if(this.currentPage == 'product-checkout'){
           this.headerVisibility=true;
           this.pageTitle = Constants.pageDescription.checkout;
           this.cartComponentVisibility = false;
+          this.searchComponentVisibility = false;
           this.headerVisibility=true;
+          this.backButtonLinkVisibilty =true;
         }
         else{
           this.headerVisibility =false;

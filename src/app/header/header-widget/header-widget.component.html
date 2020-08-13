@@ -6,5 +6,11 @@
         <div class="cart-btn float-right" *ngIf="cartComponentVisibility">
               <app-cart-widget [cartItemLength]="cartitem"></app-cart-widget>
         </div>
+        
     </div>
+    <div class="backLinkContainer float-left" *ngIf="backButtonLinkVisibilty">
+            <a routerLink="product-catalog" class="back-btn-link">
+              Back to Product Catalog
+            </a>
+        </div>
 </div>

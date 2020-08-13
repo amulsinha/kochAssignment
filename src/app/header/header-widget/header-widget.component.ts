@@ -12,6 +12,7 @@ export class HeaderWidgetComponent implements OnInit {
 
   @Input() cartComponentVisibility: boolean;
   @Input() searchComponentVisibility: boolean;
+  @Input() backButtonLinkVisibilty:boolean;
 
   private unsubscribe = new Subject();
   public cartitem = 0 ;

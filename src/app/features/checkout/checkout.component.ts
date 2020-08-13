@@ -35,8 +35,6 @@ public total;
     this.total = 0;
     _.forEach(this.chekoutItemArr, function(value) {
       _self.total= _self.total +(value.quantity * value.itemObj.price);
-      console.log('total',_self.total);
-   
     });
     return this.total;
   }

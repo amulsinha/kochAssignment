@@ -6,33 +6,8 @@
 .item-display-container{
     .item-wrapper{
         padding:10px;
-        .pic-container{
-            height: 180px;
-            width: 270px;
-            background: green;
-            margin: 0 auto;
-        }
-        .product-name-container{
-            label{
-                color:#000;
-            }
-            span{
-                color:#000;
-            }
-        }
-        .price-container{
-            label{
-                color:#000;
-            }
-            span{
-                color:#000;
-            }
-
-        }
-         .btn-container{
-            .btn{
-                color:#000;
-            }
+        .btn{
+            background-color:#00a8e1;
         }
     }
    

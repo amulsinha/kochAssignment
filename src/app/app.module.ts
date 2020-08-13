@@ -16,7 +16,7 @@ import { SortingComponent } from './core/widget/sorting/sorting.component';
 import {ProductCatalogService } from '../app/features/product-catalog/product-catalog.service';
 import {PriceRangeSliderService} from './core/widget/price-range-slider/price-range-slider.service';
 import {SearchWidgetService} from './core/widget/search-widget/search-widget.service';
-import {SortingService} from './core/widget/sorting/sorting.service'
+import {SortingService} from './core/widget/sorting/sorting.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ import {SortingService} from './core/widget/sorting/sorting.service'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    Ng5SliderModule
+    Ng5SliderModule,
   ],
   providers: [ProductCatalogService,PriceRangeSliderService,SearchWidgetService,SortingService],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 <div class="container-fluid">
       <header *ngIf="headerVisibility">
         <app-header-features-description [pageTitle]="pageTitle" *ngIf="pageTitle && pageTitle.length"> </app-header-features-description>
-        <app-header-widget [cartComponentVisibility]="cartComponentVisibility" [searchComponentVisibility]="searchComponentVisibility"></app-header-widget>
+          <app-header-widget [cartComponentVisibility]="cartComponentVisibility" [searchComponentVisibility]="searchComponentVisibility" [backButtonLinkVisibilty]="backButtonLinkVisibilty"></app-header-widget>
       </header>
 <div class="router-outlet-container">
     <router-outlet></router-outlet>
