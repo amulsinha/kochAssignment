@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
     this.router.events.subscribe((val) => {
       this.currentPage = this.setPageName(val);
       if (val instanceof NavigationEnd) {
-        if(this.currentPage == 'product-catalog'){
+        if(this.currentPage == 'order-online'){
           this.pageTitle = Constants.pageDescription.productcatlog;
           this.cartComponentVisibility = true;
           this.searchComponentVisibility =true;

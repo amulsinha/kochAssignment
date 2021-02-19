@@ -7,6 +7,14 @@ import 'rxjs/add/operator/takeUntil';
 import {SortingService} from '../../core/widget/sorting/sorting.service';
 declare var require: any
 import  * as _ from 'lodash';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
+
 @Component({
   selector: 'app-product-catalog',
   templateUrl: './product-catalog.component.html',

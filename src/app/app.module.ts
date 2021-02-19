@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import {ProductCatalogService } from '../app/features/product-catalog/product-ca
 import {PriceRangeSliderService} from './core/widget/price-range-slider/price-range-slider.service';
 import {SearchWidgetService} from './core/widget/search-widget/search-widget.service';
 import {SortingService} from './core/widget/sorting/sorting.service';
+import { HomeComponent } from './features/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +31,11 @@ import {SortingService} from './core/widget/sorting/sorting.service';
     CartWidgetComponent,
     PriceRangeSliderComponent,
     SortingComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     Ng5SliderModule,

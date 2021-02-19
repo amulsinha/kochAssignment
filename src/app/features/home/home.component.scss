@@ -1,0 +1,21 @@
+div.navigation-wrapper{
+    position: absolute;
+    top: 60%;
+    left: 45%;
+
+}
+div.navigation-wrapper a{
+    text-transform:none;
+    color:#fff;
+    text-decoration:none;
+
+}
+.centered {
+    position: fixed; /* or absolute */
+    top: 35%;
+    left: 34%;
+}  
+
+.centered img{
+    width:50%;
+}
