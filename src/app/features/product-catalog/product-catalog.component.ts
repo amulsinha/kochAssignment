@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild,ElementRef } from '@angular/core'
+// import { Location, ViewportScroller } from '@angular/common';
 import {ProductCatalogService } from './product-catalog.service';
 import {PriceRangeSliderService} from '../../core/widget/price-range-slider/price-range-slider.service';
 import {SearchWidgetService} from '../../core/widget/search-widget/search-widget.service';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/takeUntil';
 import {SortingService} from '../../core/widget/sorting/sorting.service';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+
 declare var require: any
 import  * as _ from 'lodash';
 import {
@@ -14,7 +18,6 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-
 @Component({
   selector: 'app-product-catalog',
   templateUrl: './product-catalog.component.html',
@@ -30,6 +33,7 @@ public range: any;
 public searchText:any;
 private sortCriteria:string;
 private unsubscribe = new Subject();
+
   constructor(
     private productCatalogService:ProductCatalogService,
     private priceRangeSliderService:PriceRangeSliderService,
@@ -37,9 +41,11 @@ private unsubscribe = new Subject();
     private sortingService:SortingService
     ) { }
 
+    @ViewChild("target") MyProp: ElementRef;
   ngOnInit() {
-
+    
     this.itemList = Object.assign([],require('../../../assets/static.json').Response.kebab);
+    console.log('this.itemList',this.itemList);
     this.kebabList = Object.assign([],require('../../../assets/static.json').Response.kebab);
     this.tandooriList= Object.assign([],require('../../../assets/static.json').Response.tandoori);
     this.productCatalogService.setItemList(this.itemList);
@@ -113,6 +119,10 @@ private unsubscribe = new Subject();
       else{
         this.filterVisibleListItemBasedOnPrice();
       }
+  }
+  public scrollToElement(element:any) {
+    console.log(element);
+    element.scrollIntoView({ behavior: 'smooth' });
   }
   ngOnDestroy() {
     this.unsubscribe.next();

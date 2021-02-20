@@ -5,7 +5,7 @@
 
 .item-display-container{
     .item-wrapper{
-        padding:10px;
+        padding:40px;
         .btn{
             background-color:#00a8e1;
             &:hover{
@@ -20,4 +20,32 @@
 .card-img-top{
     width:285px;
     height:200px;
+}
+.item-container{
+    .item-wrapper-items{
+        margin-top:20px;
+    }
+    h3{
+        color:#fff;
+        text-decoration: underline;
+        margin-top:50px;
+    }
+}
+.slidecontainer{
+    position: fixed;
+    top: 300px;
+    ul{
+        li{
+            list-style: none;
+            padding:10px;
+            color:#fff;
+            text-transform: uppercase;
+            cursor: pointer;
+           a{
+            color:#fff;
+            text-transform: uppercase;
+   
+           }
+        }
+    }
 }
