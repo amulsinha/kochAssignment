@@ -1,6 +1,6 @@
 export class Constants {
     public static pageDescription ={
-        productcatlog:"Product Catalog",
+        productcatlog:"Online Order",
         checkout:"Checkout"
     };
     public static pageUrl = {

@@ -1,72 +1,85 @@
 {
-    "Response": {
-        "product": [
+    "Response":
+     {
+        "kebab": 
+        [
             {
                 "itemUrl": "assets/product-images/item-1/item-1-1.png",
                 "itemId": "1",
-                "itemName": "Tshirt-XLL",
-                "price": 100
+                "itemName": "Galavti kabab(4pc)",
+                "price": 199
             },
             {
                 "itemUrl": "assets/product-images/item-1/item-1-2.png",
                 "itemId": "2",
-                "itemName": "Shirt-L",
-                "price": 2300
+                "itemName": "Shami Kabab",
+                "price": 199
             },
             {
                 "itemUrl": "assets/product-images/item-2/item-2-1.png",
                 "itemId": "3",
-                "itemName": "Cloth-XXL",
-                "price": 3300
+                "itemName": "Kakori Kabab",
+                "price": 279
             },
             {
                 "itemUrl": "assets/product-images/item-2/item-2-2.png",
                 "itemId": "4",
-                "itemName": "Shirt-L",
-                "price": 300
+                "itemName": "Pasanda Kabab",
+                "price": 299
             },
             {
                 "itemUrl": "assets/product-images/item-3/item-3-1.jpg",
                 "itemId": "5",
-                "itemName": "Cloth-V",
-                "price": 400
+                "itemName": "Chuppali Kabab",
+                "price": 200
             },
             {
                 "itemUrl": "assets/product-images/item-3/item-3-2.jpeg",
                 "itemId": "6",
-                "itemName": "Denim-Jeans",
-                "price": 400
+                "itemName": "Majlisi Kabab",
+                "price": 240
             },
             {
                 "itemUrl": "assets/product-images/item-4/item-4-1.png",
                 "itemId": "7",
-                "itemName": "Jeans-Black",
-                "price": 350
+                "itemName": "Boti Kabab",
+                "price": 300
             },
             {
                 "itemUrl": "assets/product-images/item-4/item-4-2.png",
                 "itemId": "8",
-                "itemName": "ABL Cloth",
-                "price": 400
+                "itemName": "Mahi Kabab",
+                "price": 240
             },
             {
                 "itemUrl": "assets/product-images/item-4/item-4-3.png",
                 "itemId": "9",
-                "itemName": "Brand x",
-                "price": 1300
-            },
-            {
-                "itemUrl": "assets/product-images/item-5/item-5-1.jpeg",
-                "itemId": "10",
-                "itemName": "Shirt White collor",
-                "price": 1200
-            },
-            {
-                "itemUrl": "assets/product-images/item-5/item-5-2.jpg",
-                "itemId": "11",
-                "itemName": "Denim T-shirt",
-                "price": 1100
+                "itemName": "Veg Kabab",
+                "price": 180
             }
+       
+        ],
+        "tandoori":
+        [
+            {
+                "itemUrl": "assets/product-images/item-4/item-4-3.png",
+                "itemId": "9",
+                "itemName": "Chicken Angara Tikka",
+                "price": 200
+            },
+            {
+                "itemUrl": "assets/product-images/item-4/item-4-3.png",
+                "itemId": "9",
+                "itemName": "Chicken Malai Tikka",
+                "price": 220
+            },
+            {
+                "itemUrl": "assets/product-images/item-4/item-4-3.png",
+                "itemId": "9",
+                "itemName": "Tandoori Chicken",
+                "price": 150
+            }
+
         ]
     }
 }

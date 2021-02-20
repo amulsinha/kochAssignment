@@ -22,7 +22,8 @@ import {
 })
 
 export class ProductCatalogComponent implements OnInit {
-public visibleitemList:any;
+public kebabList:any;
+public tandooriList:any;
 public checkoutListItem =[];
 public itemList : any;
 public range: any;
@@ -38,8 +39,9 @@ private unsubscribe = new Subject();
 
   ngOnInit() {
 
-    this.itemList = Object.assign([],require('../../../assets/static.json').Response.product);
-    this.visibleitemList = Object.assign([],require('../../../assets/static.json').Response.product);
+    this.itemList = Object.assign([],require('../../../assets/static.json').Response.kebab);
+    this.kebabList = Object.assign([],require('../../../assets/static.json').Response.kebab);
+    this.tandooriList= Object.assign([],require('../../../assets/static.json').Response.tandoori);
     this.productCatalogService.setItemList(this.itemList);
     let minRange= 0;
     let maxRange = _.maxBy(this.itemList, function(o) { return o.price; }).price;
@@ -75,12 +77,12 @@ private unsubscribe = new Subject();
 
   private filterVisibleListItemBasedOnPrice(){
     let _self= this;
-    this.visibleitemList = _.filter(this.itemList, function(o) { return (o.price >= _self.range.value && o.price <= _self.range.highValue); });
+    this.kebabList = _.filter(this.itemList, function(o) { return (o.price >= _self.range.value && o.price <= _self.range.highValue); });
   }
   private filterVisibleListItemBasedOnSearch(){
     let _self= this;
     if(this.searchText != '' && this.searchText.length >=3){
-      this.visibleitemList = _.filter(this.visibleitemList, function(o) { 
+      this.kebabList = _.filter(this.kebabList, function(o) { 
         let str = o.itemName.toLowerCase();
         let searchTxt = _self.searchText.toLowerCase();
         return (str.indexOf(searchTxt)>=0); 
@@ -93,16 +95,20 @@ private unsubscribe = new Subject();
 
   private filterVisibleListItemBasedOnSort(){
       if(this.sortCriteria == 'name-asc'){
-       this.visibleitemList = _.orderBy(this.visibleitemList, [obj => obj.itemName.toLowerCase()], 'asc');
+       this.kebabList = _.orderBy(this.kebabList, [obj => obj.itemName.toLowerCase()], 'asc');
+       this.tandooriList = _.orderBy(this.tandooriList, [obj => obj.itemName.toLowerCase()], 'asc');
       }
       else if(this.sortCriteria == 'name-desc'){
-        this.visibleitemList = _.orderBy(this.visibleitemList, [obj => obj.itemName.toLowerCase()], 'desc');
+        this.kebabList = _.orderBy(this.kebabList, [obj => obj.itemName.toLowerCase()], 'desc');
+        this.tandooriList = _.orderBy(this.tandooriList, [obj => obj.itemName.toLowerCase()], 'desc');
       }
       else if(this.sortCriteria == "price-lh"){
-        this.visibleitemList=  _.orderBy(this.visibleitemList, ['price'], ['asc']);
+        this.kebabList=  _.orderBy(this.kebabList, ['price'], ['asc']);
+        this.tandooriList=  _.orderBy(this.tandooriList, ['price'], ['asc']);
       }
       else if(this.sortCriteria=='price-hl'){
-        this.visibleitemList=  _.orderBy(this.visibleitemList, ['price'], ['desc']);
+        this.kebabList=  _.orderBy(this.kebabList, ['price'], ['desc']);
+        this.tandooriList=  _.orderBy(this.tandooriList, ['price'], ['desc']);
       }
       else{
         this.filterVisibleListItemBasedOnPrice();

@@ -8,9 +8,16 @@
         padding:10px;
         .btn{
             background-color:#00a8e1;
+            &:hover{
+                color:#000;
+            }
         }
     }
    
    
 
+}
+.card-img-top{
+    width:285px;
+    height:200px;
 }

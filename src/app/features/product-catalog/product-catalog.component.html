@@ -10,24 +10,33 @@
                <app-sorting></app-sorting>
             </div>
        </div>
-       <div class="item-container" *ngIf="visibleitemList && visibleitemList.length">
-              <div class="row">
-                        <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of visibleitemList">
+       <div class="item-container">
+              <div class="row kebab-container" *ngIf="kebabList && kebabList.length">
+                        <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of kebabList">
                             <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" [src]="item.itemUrl" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title">{{item.itemName}}</h5>
-                                  <p class="card-text">{{item.price}}</p>
+                                  <p class="card-text">Rs. {{item.price}}/-</p>
                                   <button type="button" (click)=addTocart(item) class="btn btn-primary">Add To cart</button>
                                 </div>
                               </div>
-                        </div>
-
-                       
-                        
+                        </div>    
               </div>
+              <div class="row tandoori-container" *ngIf="tandooriList && tandooriList.length">
+                <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of tandooriList">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" [src]="item.itemUrl" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.itemName}}</h5>
+                          <p class="card-text">Rs. {{item.price}}/-</p>
+                          <button type="button" (click)=addTocart(item) class="btn btn-primary">Add To cart</button>
+                        </div>
+                      </div>
+                </div>    
+      </div>
        </div>
-       <div class="no-item-container" *ngIf="!visibleitemList.length">
+       <div class="no-item-container" *ngIf="!kebabList.length">
          <div class="row">
             <div class="col-md-4 col-xs-12 no-item-wrapper">
                 <p>No Product Found</p>

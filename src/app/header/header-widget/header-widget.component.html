@@ -9,8 +9,13 @@
         
     </div>
     <div class="backLinkContainer float-left" *ngIf="backButtonLinkVisibilty">
-            <a routerLink="product-catalog" class="back-btn-link">
-              Back to Product Catalog
+            <a routerLink="/order-online" class="back-btn-link">
+              Back to Online Order
             </a>
         </div>
+        <div class="backLinkContainer float-left" *ngIf="!backButtonLinkVisibilty">
+          <a routerLink="/" class="back-btn-link">
+            Back to Home Page
+          </a>
+      </div>
 </div>

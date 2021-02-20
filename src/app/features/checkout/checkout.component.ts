@@ -26,7 +26,7 @@ public total;
     }
   }
   decrement(index){
-    if(this.chekoutItemArr[index].quantity > 1){
+    if(this.chekoutItemArr[index].quantity > 0){
       this.chekoutItemArr[index].quantity--;
     }
   }
