@@ -10,6 +10,7 @@ import  * as _ from 'lodash';
 export class CheckoutComponent implements OnInit {
 public chekoutItemArr:any;
 public total;
+public chkoutBtnDisabled:boolean = false;
 
   constructor(private productCatalogService:ProductCatalogService) { }
 
@@ -36,9 +37,19 @@ public total;
     _.forEach(this.chekoutItemArr, function(value) {
       _self.total= _self.total +(value.quantity * value.itemObj.price);
     });
+    if( _self.total == 0){
+      this.chkoutBtnDisabled= true;
+    }
+    else{
+      this.chkoutBtnDisabled= false;
+    }
     return this.total;
   }
   getSubtotal(){
+    if(this.total == 0){
+      this.chkoutBtnDisabled= true;
+    }
+
     return (this.total - (this.total*10/100));
   }
 }
