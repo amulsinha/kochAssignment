@@ -17,7 +17,10 @@ public itemCount:number = 0;
   }
 
   cartClick(){
-    this.router.navigate([Constants.pageUrl.checkout]);
+    if(this.cartItemLength){
+      this.router.navigate([Constants.pageUrl.checkout]);
+    }
+    
   }
 
 }
