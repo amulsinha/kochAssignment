@@ -7,20 +7,39 @@
     .item-wrapper{
         padding:40px;
         .btn{
-            background-color:#00a8e1;
+            background-color:#000;
             width:120px;
             outline: none;
             border-radius: 20px;
             border:0;
+            &:after{
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 5px;
+                left: 50%;
+                position: absolute;
+                background: #fff;
+                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 10%;
+                background: red;
+            }
             &:hover{
-                color:#000;
+                // color:#000;
+                // text-decoration: underline;
+                // transition: .3s ease-in-out;
+                &:after{
+                    width: 100%; 
+                    left: 0;
+                }
             }
             &:focus{
                 outline:none;
                 box-shadow: none;
             }
             &:active{
-                color:#fff;
+                color:#000;
                 outline: none;
                 border:0;
             }
