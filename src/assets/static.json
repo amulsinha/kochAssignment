@@ -50,12 +50,6 @@
                 "itemId": "8",
                 "itemName": "Mahi Kabab",
                 "price": 240
-            },
-            {
-                "itemUrl": "assets/product-images/item-4/item-4-3.png",
-                "itemId": "9",
-                "itemName": "Veg Kabab",
-                "price": 180
             }
        
         ],
@@ -63,19 +57,19 @@
         [
             {
                 "itemUrl": "assets/product-images/item-4/item-4-3.png",
-                "itemId": "9",
+                "itemId": "10",
                 "itemName": "Chicken Angara Tikka",
                 "price": 200
             },
             {
                 "itemUrl": "assets/product-images/item-4/item-4-3.png",
-                "itemId": "9",
+                "itemId": "11",
                 "itemName": "Chicken Malai Tikka",
                 "price": 220
             },
             {
                 "itemUrl": "assets/product-images/item-4/item-4-3.png",
-                "itemId": "9",
+                "itemId": "12",
                 "itemName": "Tandoori Chicken",
                 "price": 150
             }

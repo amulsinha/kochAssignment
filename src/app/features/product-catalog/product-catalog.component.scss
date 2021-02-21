@@ -8,8 +8,21 @@
         padding:40px;
         .btn{
             background-color:#00a8e1;
+            width:120px;
+            outline: none;
+            border-radius: 20px;
+            border:0;
             &:hover{
                 color:#000;
+            }
+            &:focus{
+                outline:none;
+                box-shadow: none;
+            }
+            &:active{
+                color:#fff;
+                outline: none;
+                border:0;
             }
         }
     }
