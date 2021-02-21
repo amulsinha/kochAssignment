@@ -3,7 +3,7 @@
           <div class="slidecontainer">
             <!-- <app-price-range-slider></app-price-range-slider> -->
             <ul class="group-item">
-                <li >Kabab's</li>
+                <li><a pageScroll href="#kabab">Kabab's</a></li>
                 <li><a pageScroll href="#tandoori">Tandoori / BBQ</a></li>
                 <li> Chicken Dishes</li>
                 <li> Mutton Dishes</li>
@@ -17,7 +17,7 @@
             </ul>
             </div>
       </div>
-      <div class="col-md-10 col-xs-12 item-display-container clearfix">
+      <div  id="kabab" class="col-md-10 col-xs-12 item-display-container clearfix">
        <div class="sorting-container clearfix">
             <!-- <div class="sortingcontainer-wrapper float-right">
                <app-sorting></app-sorting>
@@ -25,7 +25,7 @@
        </div>
        <div class="item-container">
           <h3>Kabab</h3>
-              <div #kabab class="row kebab-container item-wrapper-items" *ngIf="kebabList && kebabList.length">
+              <div  class="row kebab-container item-wrapper-items" *ngIf="kebabList && kebabList.length">
                
                         <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of kebabList">
                             <div class="card" style="width: 18rem;">
@@ -39,7 +39,7 @@
                         </div>    
               </div>
               <h3>Tandoori / BBQ</h3>
-              <div #tandoori class="row tandoori-container item-wrapper-items" *ngIf="tandooriList && tandooriList.length">
+              <div id="tandoori" class="row tandoori-container item-wrapper-items" *ngIf="tandooriList && tandooriList.length">
                 <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of tandooriList">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" [src]="item.itemUrl" alt="Card image cap">

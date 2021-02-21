@@ -7,7 +7,7 @@ import {SearchWidgetService} from '../../core/widget/search-widget/search-widget
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/takeUntil';
 import {SortingService} from '../../core/widget/sorting/sorting.service';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 declare var require: any
 import  * as _ from 'lodash';

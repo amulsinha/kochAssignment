@@ -19,8 +19,8 @@ import {PriceRangeSliderService} from './core/widget/price-range-slider/price-ra
 import {SearchWidgetService} from './core/widget/search-widget/search-widget.service';
 import {SortingService} from './core/widget/sorting/sorting.service';
 import { HomeComponent } from './features/home/home.component';
-// import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +41,8 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
     AppRoutingModule,
     FormsModule,
     Ng5SliderModule,
-    // NgxPageScrollCoreModule,
-    NgxPageScrollModule
+    Ng2PageScrollModule
+
   ],
   providers: [ProductCatalogService,PriceRangeSliderService,SearchWidgetService,SortingService],
   bootstrap: [AppComponent]
