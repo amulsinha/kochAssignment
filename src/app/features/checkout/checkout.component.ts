@@ -76,4 +76,7 @@ private unsubscribe = new Subject();
 
     return (this.total);
   }
+  sendResponse(){
+    console.log('this.checkout',this.chekoutItemArr);
+  }
 }

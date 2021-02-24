@@ -5,7 +5,7 @@
             <ul class="group-item">
                 <li><a pageScroll href="#kabab">Kabab's</a></li>
                 <li><a pageScroll href="#tandoori">Tandoori / BBQ</a></li>
-                <li> Chicken Dishes</li>
+                <li><a pageScroll href="#chickend"> Chicken Dishes</a></li>
                 <li> Mutton Dishes</li>
                 <li> Biryani/ Rice</li>
                 <li> Veg.</li>
@@ -41,6 +41,19 @@
               </div>
               <h3>Tandoori / BBQ</h3>
               <div id="tandoori" class="row tandoori-container item-wrapper-items" *ngIf="tandooriList && tandooriList.length">
+                <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of tandooriList">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" [src]="item.itemUrl" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.itemName}}</h5>
+                          <p class="card-text">Rs. {{item.price}}/-</p>
+                          <button type="button" (click)=addTocart(item) class="btn btn-primary">Add To cart</button>
+                        </div>
+                      </div>
+                </div>    
+      </div>
+      <h3>Chicken Dishesh</h3>
+              <div id="chickend" class="row tandoori-container item-wrapper-items" *ngIf="tandooriList && tandooriList.length">
                 <div class="col-md-4 col-xs-12 item-wrapper" *ngFor="let item of tandooriList">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" [src]="item.itemUrl" alt="Card image cap">

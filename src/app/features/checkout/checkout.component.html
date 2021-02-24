@@ -52,7 +52,7 @@
 
               </div>
               <div class="checkout-btn">
-                  <button type="button" [disabled]="chkoutBtnDisabled" class="btn btn-primary">Checkout</button>
+                  <button type="button" (click)=sendResponse(i) [disabled]="chkoutBtnDisabled" class="btn btn-primary">Checkout</button>
               </div>
       
             </div>
