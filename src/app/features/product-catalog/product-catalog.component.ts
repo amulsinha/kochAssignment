@@ -73,8 +73,8 @@ export class ProductCatalogComponent implements OnInit {
       this.filterVisibleListItemBasedOnSort();
     });
     this.prevSelectedItem = this.productCatalogService.getcartItemList();
-
-  }
+    // console.log('this.prevSelectedItem',this.prevSelectedItem);
+}
   addTocart(item) {
     if (this.prevSelectedItem && this.prevSelectedItem) {
       this.prevSelectedItem.push(item);
@@ -83,9 +83,34 @@ export class ProductCatalogComponent implements OnInit {
     }
     else {
       this.checkoutListItem.push(item);
+      console.log('item',item);
       this.productCatalogService.setcartItemList(this.checkoutListItem);
       this.productCatalogService.getCartDetail(this.checkoutListItem);
     }
+   
+    
+  }
+   removeFrmcart(item){
+    // this.itemX = item; 
+    // console.log('this.this.cartList',this.cartList);
+    //   if (this.cartList && this.cartList.length) {
+    //       let id= item.itemId
+    //     this.cartList.splice(this.cartList.findIndex(function(i){
+    //       return i.itemId === id;
+    //   }), 1);
+    //      console.log('this.cartList',this.cartList);
+    //      this.setcartItemList(this.cartList);
+    //      this.getCartDetail(this.cartList);
+    //   }
+    //   else {
+    //     this.checkoutListItem.push(item);
+    //     console.log('item',item);
+    //     this.setcartItemList(this.checkoutListItem);
+    //     this.getCartDetail(this.checkoutListItem);
+    //   }
+    this.productCatalogService.removeTocart(item);
+
+     
   }
 
   private filterVisibleListItemBasedOnPrice() {

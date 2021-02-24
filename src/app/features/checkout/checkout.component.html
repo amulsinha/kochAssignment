@@ -6,9 +6,9 @@
               <div class="card-body clearfix" *ngFor="let cartItem of chekoutItemArr;let i=index">
                 <h5 class="card-title float-left">{{cartItem.itemObj.itemName}}</h5>
                 <div class="button-container float-right">
-                  <button type="button" class="btn btn-info" (click)=increment(i)>+</button>
+                  <!-- <button type="button" class="btn btn-info" (click)=increment(i,cartItem.itemObj.itemId)>+</button> -->
                   <span>{{cartItem.quantity}}</span>
-                  <button type="button" class="btn btn-info" (click)=decrement(i)>-</button>
+                  <!-- <button type="button" class="btn btn-info" (click)=decrement(i)>-</button> -->
                 </div>
       
       
@@ -39,14 +39,14 @@
                       <td><span class="total">Total:</span></td>
                       <td class="total-amount"><span>{{getTotal()}}</span></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                       <td><span class="total">Discount:</span></td>
                       <td class="total-amount"><span>10%</span></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                       <td><span class="total">SubTotal:</span></td>
                       <td class="total-amount"><span>{{getSubtotal()}}</span></td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
 
