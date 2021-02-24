@@ -1,11 +1,12 @@
 
 div.navigation-wrapper{
     position: absolute;
-    top: 60%;
+    top: 56%;
     left: 45%;
 
 }
 div.navigation-wrapper a{
+    display: inline-block;
     text-transform:none;
     color:#fff;
     text-decoration:none;
